@@ -1,2 +1,1 @@
-# javascript
- js
+Practical way of practicing JS

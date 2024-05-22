@@ -129,8 +129,6 @@ const toDoList = {
     const foundTask = toDoList.tasks.find(task => task.id === id);
     if (foundTask) {
       foundTask.completed = (!foundTask.completed)
-      // another way of toggling boolean value
-      // foundTask.completed ^= true; // here it's bitwise XOR operator
     }
   }
 }
@@ -143,3 +141,8 @@ toDoList.removeTask(5)
 
 // console.log(toDoList.toggleCompleted(3));
 // console.log(toDoList);
+
+
+// ******
+// another way of toggling boolean value
+// foundTask.completed ^= true; // here it's bitwise XOR operator

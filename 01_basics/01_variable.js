@@ -9,5 +9,7 @@ let accountState;
   because of the problem occurs in block scope and functional scope
 */
 
+// it will print those value in a table where one side index no and another side the corresponding values
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState]);
+
 

@@ -49,8 +49,8 @@
 // Example input: date1 = new Date("2022-01-01"); date2 = new Date("2022-01-15");
 // Expected output: 14 (days)
 function diffBetweenTwoDays(date1, date2) {
-  diffInMS = date2 - date1;
-  diffInDays = Math.abs(diffInMS / (1000 * 60 * 60 * 24));
+  diffInMs = date2 - date1;
+  diffInDays = Math.abs(diffInMs / (1000 * 60 * 60 * 24));
   return diffInDays;
 }
 
@@ -83,9 +83,8 @@ function formatDate(anotherDate, months) {
 
 function formatSpecificDate(randomDate, days) {
   const randomDateInMs = randomDate.getTime();
-  const addDaysIntoRandomDateInMs = randomDateInMs + (days * 86400);
-  const finalDate = new Date(addDaysIntoRandomDateInMs).toLocaleDateString();
-  return finalDate;
+  const addDaysInMs = randomDateInMs + (days * 86400);
+  return new Date(addDaysInMs).toLocaleDateString();
 }
 
 // const randomDate = new Date("2023-07-25");

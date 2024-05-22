@@ -46,7 +46,7 @@ function filterSpecificGroup(newArray, property) {
   return resultArray;
 }
 
-console.log(filterSpecificGroup(newArray, property));
+// console.log(filterSpecificGroup(newArray, property));
 
 
 
@@ -74,4 +74,16 @@ function filterAdult(people, property) {
 
 // console.log(filterAdult(people, ageProperty));
 
+
+
+// console.log(addOne(3)); // it will work but check the next secnario
+function addOne(num) {
+  return num + 1;
+}
+
+
+// console.log(addTwo(3)); // error => ReferenceError: Cannot access 'addTwo' before initialization, because now the function is hold in a variable
+const addTwo = function(num) {
+  return num + 2;
+}
 

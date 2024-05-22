@@ -32,4 +32,8 @@ function filterStudents(students) {
   return students.filter(students => students.age > 18 && students.grade > 80);
 }
 
+// **** way 3 ***
+// const filterStudents = students => students.filter(students => students.age > 18 && students.grade > 80);
+
+
 console.log(filterStudents(students));

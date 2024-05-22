@@ -1,4 +1,4 @@
-// const gameName = new String("Mind"); = "Garena"
+// const gameName = new String("Mind");
 // console.log(gameName = new String("Mind"););
 // console.log(gameName = new String("Mind");[0]);
 
@@ -81,9 +81,9 @@ let bookName = "Think and Grow Rich`"
 // console.log(bookName.match(/I/gi)); // combine both global search and case-insensitive search
 // console.log(bookName.match(/I/ig)); // you can swap g,i
 
-// const str = "Hello, my name is John, hello"
-// // const result = str.match(/name/g);
-// const result = str.match(/hello|hi/i)
+const str = "Hi, my name is John, ello"
+// const result = str.match(/name/g);
+const result = str.match(/hello|hi/i) // it will check hello or hi is present in the str or not
 // console.log(result);
 
 // ********************** Challenge **********************
@@ -159,4 +159,4 @@ const anotherUrl = url.replace('%20', '-')
 // console.log(url.includes("project"));
 // console.log(url.includes("adult"));
 
-console.log(gameName.split('-'));
+// console.log(gameName.split('-'));

@@ -7,11 +7,11 @@ const balance = new Number(100);
 // console.log(balance);
 // console.log(balance.toExponential(1));
 
-// const anotherBalance = balance.toLocaleString()
+const anotherBalance = balance.toLocaleString()
 // console.log(anotherBalance);
 // console.log(typeof(anotherBalance));
 
-// const anotherBalance2 = balance.toString()
+const anotherBalance2 = balance.toString()
 // console.log(anotherBalance2);
 // console.log(typeof(anotherBalance2));
 
@@ -87,5 +87,33 @@ function hypotenuse(a, b) {
   // condition? true_value : false_value
 }
 
-console.log(hypotenuse(3, 4));
-console.log(hypotenuse(4, 4));
+// console.log(hypotenuse(3, 4));
+// console.log(hypotenuse(4, 4));
+
+
+
+// ******************
+/*
+1. how to declear number ?
+2. how to find exponential ?
+3. how to convert a number to string ?
+4. difference between .toLocalString() and .toString() ?
+5. how to fixed decimal points ?
+6. what is .toPrecision() ?
+7. how to convert a number to string in coutnry wise ?
+8. Write down about (abs, ceil, floor, round, square root, power, minimum value, maximum value) ?
+9. how to get a random number ?
+*/
+
+
+// random value 1 to 6
+const minValue = 10;
+const maxValue = 15;
+// const randomNum = Math.floor(Math.random() * 6); // it will retrun value only 0 to 5
+// to make this 1 to 6 we need to this
+// const randomNum = Math.floor((Math.random() * 6 - 1 + 1) + 1);
+// const randomNum = Math.floor((Math.random() * (maxValue - minValue + 1)) + minValue ) // FORMULA
+
+// const randomNum = Math.floor((Math.random() * (15 - 10 + 1)) + 10); 
+// const randomNum = Math.floor((Math.random() * (maxValue - minValue + 1)) + minValue);
+// console.log(randomNum);

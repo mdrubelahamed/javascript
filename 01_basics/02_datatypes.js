@@ -22,8 +22,8 @@ let nullType = null
 
 let dream; // undefined
 
-console.log(typeof null); // object
-console.log(typeof undefined); // undefined
+// console.log(typeof null); // object
+// console.log(typeof undefined); // undefined
 
-console.log(typeof Symbol); // function
-console.log(typeof Symbol()); //symbol
+// console.log(typeof Symbol); // function
+// console.log(typeof Symbol()); //symbol

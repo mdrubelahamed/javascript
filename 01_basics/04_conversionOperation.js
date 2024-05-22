@@ -36,5 +36,5 @@ let s3 = s1 +  s2
 const messyNum = 1 - 2 + "2";
 // console.log(typeof 
 
-console.log(+true); // + operator convert it's operand to in a number +true => 1 (true convert in a number)
+console.log(+true); // + operator convert it's operand to a number +true => 1 (true convert in a number)
 console.log(+false);

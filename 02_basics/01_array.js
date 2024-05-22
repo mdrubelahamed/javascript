@@ -80,3 +80,13 @@ const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // Expected output:
 
 // [0, 3, 4, 10, 7, 8]
+
+
+// ********* array Q ************
+/*
+1. Method of how to do that => push, pop, shift, unshift, slice, splice
+*/
+
+
+const anotherArray = new Array(1, 2, 3, 4, 5)
+console.log(anotherArray);

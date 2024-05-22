@@ -1,6 +1,6 @@
 function employeeSalaryCalculator(employee) {
   if (typeof employee !== "object") {
-    console.log("Please give an employee details inside an Object.")
+    console.log("Please give an employee details inside an object")
     return
   }
   const payRate = employee.payRate;

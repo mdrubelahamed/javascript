@@ -87,3 +87,29 @@ const addTwo = function(num) {
   return num + 2;
 }
 
+
+
+// *********************** Call Stack **********************
+
+function one() {
+  console.log("one");
+}
+function two() {
+  console.log("two");
+}
+function three() {
+  console.log("three");
+}
+one();
+
+/* 
+here LIFO => LAST IN FIRST OUT method will follow
+so here in callstack 
+1. one() will load
+2. inside console.log("one") will get print
+3. then two() will get called but also one() will be present in the call stack
+4. then inside two console.log("two") will get print
+5. then three() will get called but also one() & two() will be present in the call stack
+6. then inside three console.log("three" will get print)
+7. and then first three() -> two() -> one() will get delete from the callstact (lifo => last in first out)
+*/

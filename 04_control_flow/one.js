@@ -42,3 +42,15 @@ const loogedInFromEmail = true;
 
 const money = 1000;
 // if (money > 500) console.log("I have more that 500 money"); // in a single line we can ommit {} this
+
+
+
+// ************************ Question *******************
+/*
+1. How to use if else statement ?
+2. How to use or and operator in if else ?
+3. How to use comparision operator in js ?
+4. How to use switch case statement in js ? **
+5. How to write if statement with {curly braces} ?
+*/
+

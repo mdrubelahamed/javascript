@@ -71,8 +71,17 @@ function processArray(arr) {
   const joinedString = arr.join(', ');
   console.log(joinedString);
   return arr;
-
 }
+
+
+// filter method in js
+const numArr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const evenNumInArr1 = numArr1.filter((num) => num % 2 === 0)
+const oddNumInArr1 = numArr1.filter((num) => num % 2 !== 0)
+// console.log(oddNumInArr1);
+// console.log(evenNumInArr1);
+
+
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // console.log(processArray(arr));
 // Example input:

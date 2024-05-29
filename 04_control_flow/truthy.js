@@ -8,8 +8,9 @@
 // }
 
 
+// **IMPORTANT**
 /*
-Falsy values => false, 0, -0, BigInt 0n, "", null, undefined, NaN
+Falsy values => false, 0, -0, BigInt, "", null, undefined, NaN
 
 all other value are truthy value ex:
 "0", "false", " ", [], {}, function() {}, 
@@ -35,9 +36,9 @@ let val1 = undefined;
 val1 = 5 ?? 10;
 // console.log(val1);
 
-let val2 = null ?? undefined;
-// let val2 = undefined ?? null;
-// console.log(val2);
+// let val2 = null ?? undefined; // output: undefined
+// let val2 = undefined ?? null; // output: null
+console.log(val2);
 
 
 // let val3 = null || undefined ?? "foo" //  SyntaxError: Unexpected token '??'
@@ -51,3 +52,17 @@ let val3 = (null || undefined) ?? "foo" // ✅ Perfect code => we need to add pa
 
 const balance = 1000;
 // balance > 500 ? console.log("Balance is more than 500") : console.log("Balnce is not more than 500");
+
+
+
+// ************************ Question *******************
+/*
+1. What is falsy values ? Name all falsy values ? **
+2. What are truthy values ? Name truthy values ? 
+3. What is Nullish coalescing operator(??) ? How the operator work ? **
+4. Ternary operator ?
+
+*/
+
+
+// falsy values => false, 0, -0, "", BigInt, null, undefined, NaN 

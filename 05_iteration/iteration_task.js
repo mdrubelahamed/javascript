@@ -93,3 +93,141 @@ else {
 }
 ```
 */
+
+
+//////////////////////////////////////////////////////////////////
+
+// Create a JavaScript program that uses a for...of loop to iterate over the key-value pairs of an object
+// const person = {
+//   name: "Peter Thiel",
+//   age: 59,
+//   city: "Silicon Valley",
+//   country: "USA",
+// }
+
+// syntax => Object.entries(obj)
+// for (const [key, value] of Object.entries(person)) {
+//   // console.log(`${key}: ${value}`);
+// }
+
+// Create a JavaScript program that uses a for...of loop to iterate over the elements of a 2D array (matrix)
+const matrix = [
+  [0, 1, 2, 3],
+  [4, 5, 6, 7],
+  [8, 9, 10, 11]
+];
+
+for (const row of matrix) {
+  for (const value of row) {
+    // console.log(value);
+  }
+}
+
+// Create a JavaScript program that uses a for...of loop to count the number of vowels in a given string
+const text = "The quick brown fox jumps over the lazy dog.";
+
+function countVowels(text) {
+  let count = 0;
+  const vowels = "aeiou";
+
+  for (const char of text) {
+    if (vowels.includes(char)) {
+      count ++;
+    }
+  }
+  return count;
+}
+
+// console.log(countVowels(text));
+
+function reverseString(text) {
+  let reverseText = "";
+  for (const char of text) {
+    reverseText = char + reverseText;
+  }
+  return reverseText;
+}
+
+// console.log(reverseString(text));
+
+
+const person = {
+  name: "John",
+  age: 30,
+  occupation: "Software Engineer",
+  city: "New York"
+};
+
+function findKeyAndValue(person) {
+  for (const key in person) {
+    const value = person[key];
+    console.log(`${key}: ${value}`);
+  }
+};
+// findKeyAndValue(person);
+
+const mixedObject = {
+  name: "John",
+  age: 30,
+  occupation: "Software Engineer",
+  city: "New York",
+  isAdmin: true,
+  hobbies: ["reading", "coding", "gaming"]
+};
+
+function countStringValue(mixedObject) {
+  let count = 0;
+  for (const key in mixedObject) {
+    let value = mixedObject[key];
+    if (typeof value == 'string') {
+      count++;
+    }
+  }
+  return count;
+}
+
+// console.log(countStringValue(mixedObject));
+
+const students = [
+  { name: "John", grade: 85 },
+  { name: "Jane", grade: 92 },
+  { name: "Bob", grade: 78 },
+  { name: "Alice", grade: 95 },
+  { name: "Mike", grade: 88 }
+];
+
+function higherGradeStudent(students) {
+  let topStudents = [];
+  students.forEach(obj => {
+    let grade = obj.grade;
+    if (grade >= 90) {
+      topStudents.push(obj);
+    }
+  })
+  return topStudents;
+}
+
+// console.log(higherGradeStudent(students));
+
+const students2 = [
+  { name: "John", grade: 85 },
+  { name: "Jane", grade: 92 },
+  { name: "Bob", grade: 78 },
+  { name: "Alice", grade: 95 },
+  { name: "Mike", grade: 88 }
+];
+
+// function avgGradeOfStudents(students2) {
+//   const initalValue = 0;
+//   let totalGrade = 0;
+//   students2.forEach(obj => {
+//     let grade = obj.grade;
+//     totalGrade += grade;
+//   })
+//   return totalGrade / students2.length;
+// }
+
+function avgGradeOfStudents(students2) {
+  return students2.reduce((acc, obj) => acc + obj.grade, 0) / students2.length;
+}
+console.log(avgGradeOfStudents(students2));

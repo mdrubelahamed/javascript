@@ -1,0 +1,21 @@
+* {
+  background-color: #212020;
+  color: white;
+}
+button {
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 1.8rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.add-bg-green {
+  margin: 10px;
+}

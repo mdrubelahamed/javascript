@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom Third Part</title>
+  <style>
+    body { background-color: #212121; color: #fff;}
+  </style>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="main">
+    <h1>Dom Manipulation</h1>
+    <p>This is a paragraph</p>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </div>
+  <!-- <script src="./three_script.js"></script> -->
+  <script>
+    // find parent
+    const parent = document.querySelector('.main')
+    // console.log(parent);
+
+    // find children from parent and using loop get each individual children
+    const getChildren = parent.children // .children => HTMLCollection
+    // console.log(getChildren);
+    for (let i = 0; i < getChildren.length; i++) {
+      const element = getChildren[i];
+      // console.log(element);
+    }
+
+    // find childNodes from a parent
+    const getChildNodes = parent.childNodes // .childNodes => NodeList
+    // console.log(getChildNodes);
+    // getChildNodes.forEach(node => console.log(node));
+    const getChildNodesOfUnorderedList = parent.lastElementChild.childNodes;
+    // console.log(getChildNodesOfUnorderedList); // return NodeList
+
+
+    const div = document.createElement('div');
+div.className = 'main';
+div.id = Math.round(Math.random() * 10 + 1); // id will be between 1 to 11
+div.setAttribute('title', 'title1');
+div.style.backgroundColor = 'green';
+div.style.padding = '.5rem'
+div.style.borderRadius = '1rem'
+const addText = document.createTextNode('This text is added using DOM Manipulation');
+// append the text node as a child into my crated div
+div.appendChild(addText);
+
+// the div is crated and in the memory but not in the browser still
+// we need to attach our crated div to the browser display
+document.body.appendChild(div);
+
+console.log(div);
+  </script>
+</body>
+</html>

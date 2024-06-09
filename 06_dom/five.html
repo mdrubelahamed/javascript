@@ -1,0 +1,69 @@
+<!-- 
+1. how to create element using js ?
+2. how to add element using js ?
+3. how to edit value of an element using js ?
+4. how to remove element using js ?
+5. how to create text node ?
+6. how to apepnd child ?
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Dom Manipulation</title>
+  <style>
+    body {
+      background-color: #212121;
+      color: #fff;
+    }
+    li {
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+  <ul class="language">
+    <li>JavaScript</li>
+  </ul>
+</body>
+
+<script>
+  //  crate list element using js 
+  function addLanguage(langName) {
+    // crate element
+    const li = document.createElement('li');
+    // append the text using createTextNode
+    li.appendChild(document.createTextNode(langName));
+
+    // select language list
+    const ulList = document.querySelector('.language');
+    // attach the li in language list
+    ulList.appendChild(li);
+  }
+  addLanguage('TypeScript');
+  addLanguage('Python');
+  addLanguage('Ruby');
+
+
+  // edit language name
+  function editLanguageName(listNo , modifiedLanguage) {
+    // we make this
+    const languageElement = document.querySelector(`li:nth-child(${listNo})`);
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(modifiedLanguage));
+    languageElement.replaceWith(li);
+  }
+  editLanguageName(2, 'Mojo')
+
+  // remove language list
+  function removeList(listNo) {
+    const removeElement = document.querySelector(`li:nth-child(${listNo})`);
+    removeElement.remove();
+  }
+  removeList(4)
+
+</script>
+</html>

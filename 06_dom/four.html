@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Four Part</title>
+  <style>
+    body {background-color: black; color: white;}
+    #text {
+      padding: .5rem;
+      border-radius: 1rem;
+    }
+    
+    .add-text-label, .analyze {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 1rem;
+    }
+
+  </style>
+  < rel="stylesheet" href="style4.css">
+</head>
+<body>
+  <h1>JavaScript Dom Manipulation</h1>
+  <p>This is a paragraph</p>
+  <div class="container">
+    <ul>
+      <li>Sunday</li>
+      <li>Monday</li>
+      <li>Tuesday</li>
+      <li>Wednesday</li>
+    </ul>
+  </div>
+  <label for="text" class="add-text-label"> Add Text
+    <input type="text" name="text" id="text">
+  </label><br>
+  <button type="button" class="analyze">Analyze Senctence</button>
+  
+  <script src="four_script.js"></script>
+</body>
+
+<script>
+  // JavaScript code to analyze the sentence
+document.querySelector('.analyze').addEventListener('click', function () {
+  const sentence = document.querySelector('#text').value; // Use value instead of textContent to get input value
+  console.log(sentence);
+  
+  // Count the number of words
+  const words = sentence.trim().split(/\s+/); // Trim and split by one or more spaces
+  const noOfWords = words.length;
+  
+  // Count the number of characters
+  const noOfCharacters = sentence.replace(/\s/g, '').length; // Remove all spaces
+  
+  // Count the number of vowels
+  const noOfVowel = (sentence.match(/[aeiouAEIOU]/g) || []).length;
+  
+  // Showing result
+  console.log(`Number of words: ${noOfWords}`);
+  console.log(`Number of characters: ${noOfCharacters}`);
+  console.log(`Number of vowels: ${noOfVowel}`);
+  
+  // Displaying the results in the HTML
+  document.getElementById('wordCount').textContent = `Number of words: ${noOfWords}`;
+  document.getElementById('charCount').textContent = `Number of characters: ${noOfCharacters}`;
+  document.getElementById('vowelCount').textContent = `Number of vowels: ${noOfVowel}`;
+});
+
+</script>
+</html>
+

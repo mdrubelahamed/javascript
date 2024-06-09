@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom Second Part</title>
+  <style>
+    body {
+      background-color: #212121;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="day">Sunday</div>
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+  </div>
+
+  <script>
+    // get parent class element
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    
+    // get element inside parent element
+    const childrens = parent.children;
+    // console.log(childrens); // return html collection 
+
+    // how to get next sibling
+    // const dayOne = document.querySelector('.day');
+    const dayOne = document.querySelector('.day');
+    const getParentUsingChild = dayOne.parentElement;
+    // console.log(getParentUsingChild);
+    // console.log(dayOne);
+    const dayTwo = dayOne.nextElementSibling;
+    // console.log(dayTwo);
+    const dayThree = dayTwo.nextElementSibling;
+    // console.log(dayThree);
+
+    // find nodes in a parent (.childNodes)
+    // console.log(parent.childNodes); // only one line break counts
+
+    
+  </script>
+</body>
+</html>

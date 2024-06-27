@@ -1,0 +1,20 @@
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0.5rem #0056b3;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+  <h1>Async number 3</h1>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+
+  <script>
+    const heading = document.querySelector('h1')
+    const startButton = document.querySelector('#start')
+    const stopButton = document.querySelector('#stop')
+
+    // set interval using click
+    startButton.addEventListener('click', function(){
+      const intervalId = setInterval(() => {
+        console.log(`Rubel is worth having`, Date.now());
+      }, 1000);
+      
+      // stop interval using click
+      stopButton.addEventListener('click', function(){
+        clearInterval(intervalId)
+      })
+    })
+
+  </script>
+</body>
+</html>

@@ -11,7 +11,7 @@ startBtn.addEventListener('click', function(){
 
 stopBtn.addEventListener('click', function(){
   clearTimeout(changeBgColor);
-  changeBgColor = null; // i'm flashing out changeBgColor value
+  changeBgColor = null; // i'm flashing out changeBgColor memory
 })
 ```
 

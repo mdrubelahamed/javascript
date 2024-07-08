@@ -65,5 +65,3 @@ promise4
 //     reject(`ERROR: Promise 5 went wrong`);
 //   }
 // })
-
-

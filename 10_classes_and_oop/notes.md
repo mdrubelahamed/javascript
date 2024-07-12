@@ -1,6 +1,29 @@
-### Daily Routine
+# javascript and classes
 
-1. Learn a topic
-2. Grab the topic properly
-3. Practice the topic properly
-4. Revise previous topics
+## OOP
+
+## Object
+- collection of properties and methods
+- toLowerCase
+
+## why use OOP
+
+## parts of OOP
+Object literal 
+
+- Constructor function
+- Prototypes
+- Classes
+- Instances (new, this)
+
+
+## 4 pillars
+Abstraction
+Encapsulation
+Inheritance
+
+
+
+// today's topic 11 july
+- object literal
+- constructor

@@ -1,6 +1,7 @@
 import inquirer from 'inquirer';
 import qr from 'qr-image';
 import { createWriteStream } from 'fs';
+import { writeFile } from 'fs'
 
 
 inquirer
@@ -14,17 +15,19 @@ inquirer
   ])
   .then((answers) => {
     // Use user feedback for... whatever!!
-    const text = answers.string;
-    const qrpng = qr.image(`${text}`, { type: 'png' });
-    const writeStream = createWriteStream(`qrImage.png`);
+    const url = answers.string;
 
-    qrpng.pipe(writeStream);
-    
-    writeStream.on('finish', () => {
-      console.log('QR code image saved to qrImage.png');
-    });
-    
-    const pngString = qr.imageSync(`${text}`, { type: 'png' });
+    // generate the qr code
+    const qrpng = qr.image(`${url}`, { type: 'png' });
+
+    //
+    qrpng.pipe(createWriteStream(`qrImage.png`));
+
+    // create the url as message.txt file
+    writeFile('message.txt', url, (err) => {
+      if (err) throw err;
+      console.log('The file has been saved!');
+    }); 
   })
   .catch((error) => {
     if (error.isTtyError) {

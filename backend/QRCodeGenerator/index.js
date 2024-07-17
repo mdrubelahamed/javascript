@@ -2,7 +2,6 @@ import inquirer from 'inquirer';
 import qr from 'qr-image';
 import { createWriteStream } from 'fs';
 
-// var inquirer = require("inquirer");
 
 inquirer
   .prompt([
@@ -10,22 +9,22 @@ inquirer
     {
       type: "input",
       name: "string",
-      message: "What is your text?"
+      message: "Type Your text/URL:"
     }
   ])
   .then((answers) => {
     // Use user feedback for... whatever!!
     const text = answers.string;
-    const qrSvg = qr.image(`${text}`, { type: 'svg' });
-    const writeStream = createWriteStream(`qrImage.svg`);
+    const qrpng = qr.image(`${text}`, { type: 'png' });
+    const writeStream = createWriteStream(`qrImage.png`);
 
-    qrSvg.pipe(writeStream);
+    qrpng.pipe(writeStream);
     
     writeStream.on('finish', () => {
-      console.log('QR code image saved to qrImage.svg');
+      console.log('QR code image saved to qrImage.png');
     });
     
-    const svgString = qr.imageSync(`${text}`, { type: 'svg' });
+    const pngString = qr.imageSync(`${text}`, { type: 'png' });
   })
   .catch((error) => {
     if (error.isTtyError) {

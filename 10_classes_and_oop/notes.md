@@ -27,3 +27,10 @@ Inheritance
 // today's topic 11 july
 - object literal
 - constructor
+
+
+
+
+####  Prototype
+
+#### Inheritence

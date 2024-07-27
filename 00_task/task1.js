@@ -13,7 +13,7 @@ const str4 = "Peter";
 let foo = "hello";
 // console.log(1 + 2 + 3 + "55" + 4); // weakly typed programming language => implict type conversion
 
-let dream ;
+let dream;
 // console.log(typeof dream);
 
 const number = 1
@@ -25,7 +25,7 @@ const noValue = null
 const notALegalNumber = NaN
 
 const obj = {
-  name : "Bill",
+  name: "Bill",
   age: 26,
 }
 // console.log(obj.iDontExixt);
@@ -33,7 +33,7 @@ const obj = {
 // const notSafeInt = Math.pow(2, 100)
 // console.log(Number.isSafeInteger(notSafeInt)); // if safe => true, if safe not => false
 
-const num = 2**100000
+const num = 2 ** 100000
 // console.log(num);
 
 const str = "Hello, World!";

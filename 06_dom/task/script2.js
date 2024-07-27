@@ -13,13 +13,13 @@ function changeContent() {
 
   // Task 2: Change the image source
   toggleImageButton.addEventListener('click', () => {
-  // Task 2: Toggle the visibility of the image
-  if (image.style.display === 'none') {
-    image.style.display = 'block';
-  } else {
-    image.style.display = 'none';
-  }
-});
+    // Task 2: Toggle the visibility of the image
+    if (image.style.display === 'none') {
+      image.style.display = 'block';
+    } else {
+      image.style.display = 'none';
+    }
+  });
 
 }
 changeContent();
